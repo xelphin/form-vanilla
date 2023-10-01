@@ -1,0 +1,166 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* --------------------------------------- */
+/* --------------- GENERAL --------------- */
+/* --------------------------------------- */
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    /* Pane Sizes */
+    --left-pane-width: 40vw;
+    --right-pane-width: calc(100vw - var(--left-pane-width));
+    /* Theme Colors */
+    --background-color: rgb(53, 48, 48);
+    --background-color2: rgb(69, 61, 61);
+    --shadow-color: rgb(34, 31, 31);
+    --text-color: turquoise;
+    --text-color2:rgb(243, 95, 216);
+    --text-color3:rgb(250, 180, 74);
+    /* Font */
+    font-family: 'Syne', sans-serif;
+    /* Padding */
+    --inner-padding: 20px;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+}
+
+.pane-div {
+    height: 100vh;
+}
+
+/* --------------------------------------- */
+/* ------------- LEFT PANE --------------- */
+/* --------------------------------------- */
+
+#left-pane-div {
+    width: var(--left-pane-width);
+    background: no-repeat url("./resources/planet_img.jpg");
+}
+
+
+/* --------------------------------------- */
+/* ------------- RIGHT PANE -------------- */
+/* --------------------------------------- */
+
+#right-pane-div {
+    width: var(--right-pane-width);
+    background-color: var(--background-color);
+    font-weight:600;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 5% 0%;
+    text-align: center;
+}
+#right-pane-div > h2 {
+    font-size: 3rem;
+    text-align: left;
+    padding: 0 var(--inner-padding);
+}
+
+/* ---------------- FORM ----------------- */
+
+#form {
+    width: 100%;
+    height: 50%;
+    color: var(--text-color);
+    text-align: left;
+}
+#form-inner-div {
+    background-color: var(--background-color2);
+    width: 100%;
+    height: 80%;
+    display: flex;
+    padding: 10px var(--inner-padding);
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+#form-inner-div h2 {
+    font-size: 2rem;
+}
+#form-inner-parameters-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.form-parameter {
+    display: flex;
+    flex-direction: column;
+    color: var(--text-color);
+    width: 45%;
+    margin: 10px 0px;
+}
+
+.form-parameter input {
+    width: 70%;
+}
+
+/* --------------------------------------- */
+/* --------------- EFFECTS --------------- */
+/* --------------------------------------- */
+
+.text-gradient-effect {
+    background: linear-gradient(to right, var(--text-color), var(--text-color2), var(--text-color3));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.shadow-effect {
+    box-shadow: 5px 5px 15px var(--shadow-color);
+}
