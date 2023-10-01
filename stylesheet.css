@@ -61,6 +61,7 @@ table {
     --right-pane-width: calc(100vw - var(--left-pane-width));
     /* Theme Colors */
     --background-color: rgb(53, 48, 48);
+    --background-color-transparent: rgba(53, 48, 48, 0.646);
     --background-color2: rgb(69, 61, 61);
     --shadow-color: rgb(34, 31, 31);
     --text-color: turquoise;
@@ -91,12 +92,40 @@ body {
     background: no-repeat url("./resources/planet_img.jpg");
 }
 
+#banner-div {
+    color: var(--text-color);
+    background-color: var(--background-color-transparent);
+    height: 15%;
+    position:relative;
+    top: 23%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+}
+
+#banner-div > h1 {
+    font-size: 3.5rem;
+    letter-spacing: 0.5rem;
+}
+
+#photo-credit {
+    margin: 5px;
+    color: var(--shadow-color);
+    position: absolute;
+    bottom: 0;
+    font-weight: 800;
+    font-size: 0.8rem;
+}
 
 /* --------------------------------------- */
 /* ------------- RIGHT PANE -------------- */
 /* --------------------------------------- */
 
 #right-pane-div {
+    font-family: var(--main-font);
     width: var(--right-pane-width);
     background-color: var(--background-color);
     font-weight:600;
