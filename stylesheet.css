@@ -68,8 +68,9 @@ table {
     --text-color3:rgb(250, 180, 74);
     /* Font */
     font-family: 'Syne', sans-serif;
+    --main-font: 'Syne', sans-serif;
     /* Padding */
-    --inner-padding: 20px;
+    --inner-padding: 30px;
 }
 
 body {
@@ -115,14 +116,12 @@ body {
 
 #form {
     width: 100%;
-    height: 50%;
     color: var(--text-color);
     text-align: left;
 }
 #form-inner-div {
     background-color: var(--background-color2);
     width: 100%;
-    height: 80%;
     display: flex;
     padding: 10px var(--inner-padding);
     flex-direction: column;
@@ -146,8 +145,56 @@ body {
     margin: 10px 0px;
 }
 
-.form-parameter input {
+.form-parameter > input {
+    margin: 5px 0;
     width: 70%;
+    background-color: var(--background-color);
+    height: 30px;
+    color: var(--text-color2);
+    border-color: var(--background-color);
+}
+.form-parameter > input:focus, .form-parameter > input:active {
+    border-color: var(--text-color2);
+}
+
+#submit-btn {
+    border-color: transparent;
+    margin: 20px var(--inner-padding);
+    border-radius: 5px;
+    width: 150px;
+    height: 15%;
+    font-size: 1rem;
+    background-color: var(--text-color3);
+    color: var(--background-color);
+    font-family: var(--main-font);
+    font-weight: 600;
+    position: relative;
+    top: 0;
+    left: 0;
+    transition: top 0.1s ease, left 0.1s ease;
+}
+
+#submit-btn:hover {
+    background-color: var(--text-color2);
+    box-shadow: 15px 15px 8px var(--shadow-color);
+    position: relative;
+    top: -2px;
+    left: -2px;
+
+}
+
+#form > h3 {
+    margin: 20px var(--inner-padding);
+}
+
+#form > h3 > span {
+    color: var(--text-color3);
+    text-decoration: underline;
+    transition: color 0.15s ease;
+}
+
+#form > h3 > span:hover {
+    color: var(--text-color2);
 }
 
 /* --------------------------------------- */
